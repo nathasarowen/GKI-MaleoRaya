@@ -1,0 +1,13 @@
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    color: #4caf50;
+  }
+  
+  button {
+    margin-top: 20px;
+  }
+  
