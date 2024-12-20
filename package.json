@@ -1,0 +1,22 @@
+{
+  "name": "gki-maleo-raya-backend",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "start:frontend": "cd frontend && ng serve --open",
+    "start:backend": "cd backend && node src/app.js",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Becket Tegar Surya Christy, Nathasa Rowen Frederika Abarua, Maria Rachel Kesya Makarena, Aundrel Aza Sadira",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.11.5"
+  }
+}
