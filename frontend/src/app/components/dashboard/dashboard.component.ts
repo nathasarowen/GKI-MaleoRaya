@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
       <button (click)="logout()" class="btn btn-danger">Logout</button>
     </div>
   `,
+  // templateUrl: './login.component.html',
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {

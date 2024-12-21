@@ -1,0 +1,73 @@
+/* login.component.css
+
+/* Memastikan bahwa gaya ini hanya diterapkan pada komponen login */
+:host {
+    display: block;
+}
+
+/* .container {
+    max-width: 500px;
+    margin-top: 100px;    
+} */
+
+.card {
+    border-radius: 8px;    
+    border: none;
+}
+
+.container-logo {        
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 120px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #22267d;
+}
+
+.logo-img {
+    width: 100px; /* Atur lebar logo */
+    height: auto; /* Agar proporsi logo tetap terjaga */
+    margin-bottom: 20px; /* Memberi jarak antara logo dan teks */
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+}
+
+.form-control {
+    border-radius: 50px;
+    padding: 10px;
+    border-color: #22277daf;    
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #272c8f, #1378d1);
+    /* border-color: linear-gradient(90deg, #5042e2, #665eba); */
+    border-radius: 50px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #22267d, #116dbe);    
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
