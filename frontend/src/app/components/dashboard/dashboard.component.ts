@@ -1,17 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-dashboard',
-  template: `
-    <div class="container mt-5">
-      <h1>Welcome to the Dashboard</h1>
-      <p>Welcome, {{ username }}!</p>
-      <button (click)="logout()" class="btn btn-danger">Logout</button>
-    </div>
-  `,
-  // templateUrl: './login.component.html',
+  templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
@@ -25,9 +19,16 @@ export class DashboardComponent implements OnInit {
     this.username = user.username || 'Guest';
   }
 
-  logout() {
+  logout(): void {
+    // Hapus overlay Bootstrap jika masih ada
+    const modalBackdrop = document.querySelector('.modal-backdrop');
+    if (modalBackdrop) {
+      modalBackdrop.remove();
+    }
+  
+    // Lanjutkan proses logout
     this.authService.logout().subscribe({
-      next: (response) => {
+      next: () => {
         localStorage.removeItem('user');
         this.router.navigate(['/login']);
       },
@@ -35,5 +36,5 @@ export class DashboardComponent implements OnInit {
         console.error('Logout failed:', error);
       }
     });
-  }
+  }    
 }
